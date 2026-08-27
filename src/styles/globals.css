@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+* {
+  @apply scroll-smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-primary font-sans antialiased;
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+}
+
+/* Typography */
+h1 {
+  @apply font-serif font-bold text-4xl md:text-5xl lg:text-6xl leading-tight;
+}
+
+h2 {
+  @apply font-serif font-bold text-3xl md:text-4xl leading-tight;
+}
+
+h3 {
+  @apply font-serif font-bold text-2xl md:text-3xl;
+}
+
+h4 {
+  @apply font-semibold text-xl md:text-2xl;
+}
+
+h5 {
+  @apply font-semibold text-lg md:text-xl;
+}
+
+h6 {
+  @apply font-semibold text-base md:text-lg;
+}
+
+p {
+  @apply text-base md:text-lg leading-relaxed;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+/* Buttons */
+.btn {
+  @apply px-6 py-3 rounded-xl font-semibold text-base transition-all duration-200 ease-out inline-flex items-center justify-center gap-2;
+}
+
+.btn-primary {
+  @apply btn bg-primary text-white hover:bg-dark-gray shadow-subtle;
+}
+
+.btn-primary:active {
+  @apply scale-95;
+}
+
+.btn-secondary {
+  @apply btn bg-secondary text-primary hover:bg-light-gray border border-light-gray;
+}
+
+.btn-outline {
+  @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+}
+
+.btn-ghost {
+  @apply btn text-primary hover:bg-soft-beige;
+}
+
+.btn-sm {
+  @apply px-4 py-2 text-sm;
+}
+
+.btn-lg {
+  @apply px-8 py-4 text-lg;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-300 overflow-hidden;
+}
+
+.card-hover {
+  @apply cursor-pointer transform hover:scale-105 transition-transform duration-300;
+}
+
+/* Input Fields */
+input,
+textarea,
+select {
+  @apply w-full px-4 py-3 rounded-lg border border-light-gray focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-10 transition-all duration-200;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply text-gray-400;
+}
+
+/* Loading Skeleton */
+.skeleton {
+  @apply animate-pulse bg-light-gray rounded-lg;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Container */
+.container {
+  @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+}
+
+/* Grid */
+.grid-auto {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Section Spacing */
+.section-py {
+  @apply py-12 md:py-20 lg:py-24;
+}
+
+/* Badge */
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-semibold;
+}
+
+.badge-primary {
+  @apply badge bg-primary text-white;
+}
+
+.badge-secondary {
+  @apply badge bg-secondary text-primary;
+}
+
+.badge-success {
+  @apply badge bg-success text-white;
+}
+
+/* Divider */
+.divider {
+  @apply h-px bg-light-gray;
+}
+
+/* RTL Support */
+[dir='rtl'] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir='rtl'] .text-left {
+  text-align: right;
+}
+
+[dir='rtl'] .text-right {
+  text-align: left;
+}
+
+[dir='rtl'] .ml-4 {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+[dir='rtl'] .mr-4 {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
